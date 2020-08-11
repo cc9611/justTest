@@ -1,0 +1,12 @@
+@import "./styles/iconfont.wxss";
+
+page, view{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+page{
+  /* 定义统一颜色 */
+  --themeColor:#ff293c;
+  font-size: 28rpx;
+}
