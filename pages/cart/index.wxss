@@ -1,1 +1,20 @@
 /* pages/cart/index.wxss */
+.receive_address {
+  /* 添加收货地址按钮 */
+  /* 收货地址样式 */
+}
+.receive_address .address_button {
+  padding: 20rpx;
+}
+.receive_address .address_button button {
+  width: 60%;
+}
+.receive_address .address_detail {
+  padding: 30rpx;
+  flex-direction: column;
+}
+.receive_address .address_detail .detail_row1 {
+  display: flex;
+  justify-content: space-between;
+  height: 50rpx;
+}

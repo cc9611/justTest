@@ -1,2 +1,55 @@
-<!--pages/cart/index.wxml-->
-<text>pages/cart/index.wxml</text>
+<!-- 收货地址 -->
+<view class="receive_address">
+    <view class="address_button" wx:if="{{!address.userName}}">
+        <button type="primary" plain="{{true}}" bind:tap="handleChooseAddress">
+            添加收货地址
+        </button>
+    </view>
+    <view class="address_detail" wx:else>
+        <view class="detail_row1">
+            <view class="detail_userName">
+                收件人：{{address.userName}}
+            </view>
+            <view class="detail_telNumber">
+                手机号：{{address.telNumber}}
+            </view>
+        </view>
+        <view class="detail_row2">
+            <view class="detail_address">
+                {{address.all}}
+            </view>
+        </view>
+    </view>
+</view>
+
+<!-- 购物车 -->
+<view class="cart_content">
+    <view class="cart_title">购物车</view>
+    <view class="cart_main">
+        <view class="cart_item">
+            <!-- 复选框 -->
+            <view class="item_checkbox">
+                <checkbox-group bindchange="">
+                    <checkbox></checkbox>
+                </checkbox-group>
+            </view>
+            <!-- 图片 -->
+            <navigator class="item_img" >
+                <image class="" src="http://image1.suning.cn/uimg/b2c/newcatentries/0070078570-000000000147821386_1_400x400.jpg" mode="widthFix"></image>
+            </navigator>
+            <!-- 商品信息 -->
+            <view class="item_info">
+                <view class="item_name">TCL D55A930C 55英寸 HDR纤薄4K曲面 64位30核智能液晶电视机（黑）</view>
+                <view class="item_price_wrap">
+                    <view class="price">￥999</view>
+                    <view class="price_tool">
+                        <view class="tool_edit">-</view>
+                        <view class="tool_num">9</view>
+                        <view class="tool_edit">+</view>
+                    </view>
+                </view>
+            </view>
+
+        </view>
+    </view>
+</view>

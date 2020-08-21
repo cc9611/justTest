@@ -17,7 +17,7 @@
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#ff293c",
-    "navigationBarTitleText": "猪猪商城",
+    "navigationBarTitleText": "猪猪小卖部",
     "navigationBarTextStyle":"white"
   },
   "tabBar": {
@@ -33,7 +33,7 @@
       "pagePath": "pages/category/index",
       "text": "分类",
       "iconPath": "icon/category.png",
-      "selectedIconPath": "icon/home-o.png"
+      "selectedIconPath": "icon/category-o.png"
     },
     {
       "pagePath": "pages/cart/index",
