@@ -17,6 +17,7 @@
     "checkInvalidKey": true,
     "checkSiteMap": true,
     "uploadWithSourceMap": true,
+    "compileHotReLoad": true,
     "useMultiFrameRuntime": true,
     "useApiHook": false,
     "babelSetting": {
@@ -28,8 +29,7 @@
     "useCompilerModule": true,
     "userConfirmedUseCompilerModuleSwitch": false,
     "packNpmManually": false,
-    "packNpmRelationList": [],
-    "compileHotReLoad": true
+    "packNpmRelationList": []
   },
   "compileType": "miniprogram",
   "libVersion": "2.12.1",

@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "usingComponents": {},
+  "navigationBarTitleText": "支付",
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark"
 }

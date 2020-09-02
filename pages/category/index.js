@@ -37,7 +37,6 @@ Page({
       }
     }
   },
-
   /* 获取商品分类接口 */
   async getCateList() {
     const res =  await request({ url: '/categories' });
@@ -67,5 +66,4 @@ Page({
     })
     console.log(index);
   }
-
 })

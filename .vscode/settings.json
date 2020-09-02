@@ -1,9 +1,9 @@
 {
     "files.associations": {
         "*.cjson": "jsonc",
-        "*.wxss": "wxss",
+        "*.wxss": "css",
         "*.wxs": "javascript",
         "*.js": "javascript",
-        "*.wxml": "wxml"
+        "*.wxml": "html"
     }
 }

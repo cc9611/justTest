@@ -56,6 +56,7 @@ Page({
     console.log(index);
     if (index == -1) {
       /* 购物车中不存在此商品 */
+      this.goodsInfo.checked = true;
       this.goodsInfo.num = 1;
       cart.push(this.goodsInfo)
     } else {

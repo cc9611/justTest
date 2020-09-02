@@ -35,7 +35,7 @@
                     url="/pages/goods_list/index?cid={{item2.cat_id}}">
                         <image src="{{item2.cat_icon}}" mode="widthFix"></image>
                         <view class="goods_name">
-                            {{item2.cat_name}}   
+                            {{item2.cat_name}}
                         </view>
                     </navigator>
                 </view>

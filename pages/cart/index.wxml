@@ -21,35 +21,61 @@
         </view>
     </view>
 </view>
-
 <!-- 购物车 -->
 <view class="cart_content">
     <view class="cart_title">购物车</view>
-    <view class="cart_main">
-        <view class="cart_item">
-            <!-- 复选框 -->
-            <view class="item_checkbox">
-                <checkbox-group bindchange="">
-                    <checkbox></checkbox>
-                </checkbox-group>
-            </view>
-            <!-- 图片 -->
-            <navigator class="item_img" >
-                <image class="" src="http://image1.suning.cn/uimg/b2c/newcatentries/0070078570-000000000147821386_1_400x400.jpg" mode="widthFix"></image>
-            </navigator>
-            <!-- 商品信息 -->
-            <view class="item_info">
-                <view class="item_name">TCL D55A930C 55英寸 HDR纤薄4K曲面 64位30核智能液晶电视机（黑）</view>
-                <view class="item_price_wrap">
-                    <view class="price">￥999</view>
-                    <view class="price_tool">
-                        <view class="tool_edit">-</view>
-                        <view class="tool_num">9</view>
-                        <view class="tool_edit">+</view>
+    <block wx:if="{{cart.length!==0}}">
+        <view class="cart_main" wx:for="{{cart}}" wx:key="goods_id">
+            <view class="cart_item">
+                <!-- 复选框 -->
+                <view class="item_checkbox">
+                    <checkbox-group bindchange="handleItemChange" data-id="{{item.goods_id}}">
+                        <checkbox checked="{{item.checked}}"></checkbox>
+                    </checkbox-group>
+                </view>
+                <!-- 图片 -->
+                <navigator class="item_img" >
+                    <image class="" src="{{item.goods_big_logo}}" mode="widthFix"></image>
+                </navigator>
+                <!-- 商品信息 -->
+                <view class="item_info">
+                    <view class="item_name">{{item.goods_name}}</view>
+                    <view class="item_price_wrap">
+                        <view class="price">￥{{item.goods_price}}</view>
+                        <view class="price_tool">
+                            <view class="tool_edit" bind:tap="handleItemNumEdit" data-id="{{item.goods_id}}" data-operation="{{-1}}">-</view>
+                            <view class="tool_num">{{item.num}}</view>
+                            <view class="tool_edit" bind:tap="handleItemNumEdit" data-id="{{item.goods_id}}" data-operation="{{1}}">+</view>
+                        </view>
                     </view>
                 </view>
             </view>
-
         </view>
+    </block>
+    <block wx:else>
+        <image mode="widthFix" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1598529203324&di=f330a0b242795f97b802cd779ad8398e&imgtype=0&src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2Fe1b1467beea0a9c7d6a56b32bac6d7e5dcd914f7c3e6-YTwUd6_fw658"></image>
+    </block>
+</view>
+
+<!-- 底部工具栏 -->
+<view class="footer_tools">
+    <!-- 全选按钮 -->
+    <view class="all_chk">
+        <checkbox-group bindchange="handleItemAllChecked">
+            <checkbox checked="{{allChecked}}">全选</checkbox>
+        </checkbox-group>
+    </view>
+    <!-- 总价格 -->
+    <view class="total_price">
+        <view class="price_info">
+            合计：<text class="info_num">￥{{totalPrice}}</text>
+        </view>
+        <view class="price_tip">
+            包含运费
+        </view>
+    </view>
+    <!-- 结算 -->
+    <view class="pay" bindtap="handlePay">
+        结算({{totalNum}})
     </view>
 </view>
